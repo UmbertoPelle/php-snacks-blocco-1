@@ -16,7 +16,7 @@ $isNumber = is_numeric($age);
 $atCheck = strpos($email, '@');
 $dotCheck = strpos($email, '.');
 
-if ($nameLength > 3  && $isNumber && $atCheck && $dotCheck) {
+if ($nameLength > 3  && $isNumber && $atCheck !== false && $dotCheck !== false) {
   echo "Accesso Riuscito";
 }else {
   echo "Accesso negato";
