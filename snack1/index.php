@@ -19,10 +19,26 @@ Olimpia Milano - Cantù | 55-60 -->
       'away'=>'Chicago Bulls',
       'scoreHome'=>'100',
       'scoreAway'=>'90'
+    ],
+    'thirdTurn' =>[
+      'home'=>'Viola',
+      'away'=>'Bim bum basket',
+      'scoreHome'=>'110',
+      'scoreAway'=>'1'
     ]
   ];
 
   foreach ($arrDayOne as $turn) {
-    echo $turn['home'].' - ' .$turn['away']. ' / ' . $turn['scoreHome'].' - ' .$turn['scoreAway'] . '<br>';
+    //echo $turn['home'].' - ' .$turn['away']. ' / ' . $turn['scoreHome'].' - ' .$turn['scoreAway'] . '<br>';
+
+    foreach ($turn as $key => $game) {
+      echo $game;
+      if ($key === 'away') {
+        echo ' / ';
+      } elseif ($key !== 'scoreAway') {
+        echo ' - ';
+      }
+    }
+    echo '<br>';
   }
  ?>
